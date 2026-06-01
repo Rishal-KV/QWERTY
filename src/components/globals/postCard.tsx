@@ -9,11 +9,11 @@ import Image from "next/image";
 
 interface PostCardProps {
 	post: {
-		id: string;
+		id: number;
 		name: string;
 		username: string;
 		image: string;
-		likes: number;
+		likes: string;
 		content: string;
 		comments: number;
 	};
