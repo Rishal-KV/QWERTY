@@ -8,8 +8,10 @@ import {Input} from "@/components/ui/input";
 import {Label} from "@/components/ui/label";
 import {Login} from "@/app/actions/auth";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 export default function LoginPage() {
+	const router = useRouter();
 	const [showPassword, setShowPassword] = useState(false);
 	const [formData, setFormData] = useState({
 		email: "",
@@ -36,6 +38,7 @@ export default function LoginPage() {
 
 		if (response.success) {
 			alert(response.message);
+			router.push("/feed");
 		} else {
 			alert(response.message);
 		}

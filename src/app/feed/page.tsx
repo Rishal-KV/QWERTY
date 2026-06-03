@@ -3,7 +3,6 @@
 import {LeftSideBar} from "@/components/globals/leftSideBar";
 import {RightSideBar} from "@/components/globals/rightSideBar";
 import {PostCard} from "@/components/globals/postCard";
-
 export default function SocialMediaLayout() {
 	const posts = [
 		{
