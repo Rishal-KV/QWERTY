@@ -111,7 +111,7 @@ export async function Register(formData: FormData) {
 
 		// Create user
 		const user = await User.create({
-			name,
+			userName: name.toLowerCase().replace(/\s+/g, ""),
 			email,
 			password: hashedPassword,
 		});
@@ -121,7 +121,7 @@ export async function Register(formData: FormData) {
 			message: "Registration successful",
 			user: {
 				id: user._id.toString(),
-				name: user.name,
+				userName: user.userName,
 				email: user.email,
 			},
 		};
